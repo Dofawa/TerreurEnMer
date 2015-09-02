@@ -1,0 +1,20 @@
+{
+  "name": "Mulou-garous",
+  "version": "0.0.1",
+  "authors": [
+    "Ener-Getick <energetick.guigui@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lumx": "~0.3.79"
+  }
+}

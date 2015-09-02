@@ -1,0 +1,134 @@
+html {
+    font-family: Roboto, Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+
+#page-container {
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: outside none none;
+        .sidebar-menu__link {
+            display: block;
+            padding: 0 16px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #333;
+            line-height: 48px;
+            text-decoration: none;
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+
+    &.sidebar--opened {
+        + #content-container {
+            transform: translate3d(301px, 0, 0);
+        }
+    }
+}
+
+#content-container {
+    position: relative;
+    z-index: 2;
+    background: #EEE;
+    transition: all 0.5s ease 0s;
+    min-height: 100vh;
+}
+
+img {
+    &.img-bordered {
+        box-shadow: 0 0 0 3px #fff, 0 0 0 4px #ddd;
+    }
+}
+.clickable {
+    cursor: pointer;
+}
+.bold {
+    font-weight: 700;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.btn--fixed {
+    position: fixed !important;
+    right: 10%;
+    bottom: 5%;
+}
+.btn--fab {
+    @for $i from 1 through 3 {
+        &.z-depth#{$i} {
+            @include z-depth($i);
+        }
+    }
+}
+.card {
+    &.with__img__header {
+        margin-top: 100px;
+        overflow: visible;
+        .img__header {
+            height: 0;
+            text-align: center;
+            img {
+                position: relative;
+                top: -100px;
+                margin: auto;
+            }
+        }
+    }
+    .card-img-legend {
+        position: absolute;
+        right: 0;
+        background: none repeat scroll 0 0 #fff;
+        padding: 5px 10px;
+        border: 1px solid #bdbdbd;
+        border-right: 0;
+        border-top: 0;
+        border-radius: 0 0 0 10px;
+    }
+    .card__img span {
+        text-shadow: 0 0 2px #000;
+    }
+}
+.shadow {
+    text-shadow: 0 0 0.3px #000;
+}
+.toolbar__label img {
+    vertical-align: -10px;
+}
+.logo {
+    height: 40px;
+}
+.fs-title a {
+    text-decoration: none;
+    color: white;
+}
+#progress {
+    position: relative;
+}
+.display-inline {
+    display: inline;
+}
+.strike {
+    text-decoration: line-through;
+}
+.line-icon-height {
+    line-height: 40px;
+}

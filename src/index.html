@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="app">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mulou-garous</title>
+
+        <!-- injector:css -->
+        <!-- endinjector -->
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+        <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon"> -->
+    </head>
+    <body>
+        <!-- Content -->
+        <div id="content-container">
+            <ng-include src="'partials/common/header.html'"></ng-include>
+
+            <div class="container mv+">
+                <ng-include ng-controller="HomeController" src="'partials/homepage/homepage.html'"></ng-include>
+            </div>
+        </div>
+
+        <!-- injector:js -->
+        <!-- endinjector -->
+    </body>
+</html>
