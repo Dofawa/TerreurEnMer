@@ -11,7 +11,7 @@
             </div>
         </div>
         <ul class="list">
-            <li class="list-row has-divider has-divider--dark col-lg-6 player" ng-class="{'dead': player.dead}" ng-repeat="player in gamePlay.players track by $index">
+            <li class="list-row has-divider has-divider--dark col-lg-6 player" ng-class="{'dead': player.dead, 'married': player.marriedTo}" ng-repeat="player in gamePlay.players track by $index">
                 <div class="list-row__primary">
                     <i class="icon icon--s icon--grey icon--flat mdi mdi-account"></i>
                 </div>

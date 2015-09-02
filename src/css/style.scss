@@ -10,7 +10,11 @@ html {
     border-left: 1px solid #ddd;
 
     &.dead {
-        background-color: #ffcdd2;
+        background-color: #ffcdd2 !important;
+    }
+
+    &.married {
+        background-color: #c8e6c9;
     }
 }
 

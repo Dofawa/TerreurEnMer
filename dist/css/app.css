@@ -5265,7 +5265,11 @@ html {
 }
 
 .player.dead {
-  background-color: #ffcdd2;
+  background-color: #ffcdd2 !important;
+}
+
+.player.married {
+  background-color: #c8e6c9;
 }
 
 #content-container {
