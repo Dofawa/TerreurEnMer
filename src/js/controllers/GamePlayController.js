@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  app.controller('GamePlayController', function($scope, Storage, LxNotificationService) {
+  app.controller('GamePlayController', function($scope, Storage, LxNotificationService, LxDialogService) {
     function shuffleArray(a) {
       var i, t, j;
       for (i = a.length - 1; i > 0; i -= 1) {
@@ -82,6 +82,11 @@
       }
       Storage.set('configuration.players', value);
     });
+
+    $scope.gamePlay.marry = function(player) {
+      $scope.marry.player = player;
+      LxDialogService.open('marry');
+    }
 
   });
 })();

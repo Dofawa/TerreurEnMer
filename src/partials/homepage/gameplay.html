@@ -34,12 +34,18 @@
                             <span ng-show="player.role" ng-bind="player.role"></span>
                             <span ng-hide="player.role">Non défini</span>
                         </span>
+                        <span ng-show="player.marriedTo">
+                            / Lié à <span ng-bind="player.marriedTo.nickName"></span>
+                        </span>
                     </span>
                 </div>
 
-                <div class="list-row__secondary" ng-click="player.dead = !player.dead">
-                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-window-close" lx-tooltip="Mort" ng-hide="player.dead"></i>
-                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-check" lx-tooltip="Rescuciter" ng-show="player.dead"></i>
+                <div class="list-row__secondary">
+                    <span ng-click="player.dead = !player.dead">
+                        <i class="icon icon--xs icon--grey icon--flat mdi mdi-window-close" lx-tooltip="Mort" ng-hide="player.dead"></i>
+                        <i class="icon icon--xs icon--grey icon--flat mdi mdi-check" lx-tooltip="Rescuciter" ng-show="player.dead"></i>
+                    </span>
+                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-account-switch" lx-tooltip="Lier à un personnage" ng-click="gamePlay.marry(player)"></i>
                 </div>
             </li>
         </ul>

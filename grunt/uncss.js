@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 /\.btn/,
                 /\.card/,
                 /\.data-table/,
-                // /\.dialog/,
+                /\.dialog/,
                 /\.dropdown/,
                 /\.fab/,
                 // /\.input\-file/,
