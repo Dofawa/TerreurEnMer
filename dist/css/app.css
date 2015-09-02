@@ -32,6 +32,10 @@
   content: "\f120";
 }
 
+.mdi-auto-fix:before {
+  content: "\f154";
+}
+
 .mdi-check:before {
   content: "\f1fe";
 }
@@ -42,10 +46,6 @@
 
 .mdi-dots-vertical:before {
   content: "\f298";
-}
-
-.mdi-information:before {
-  content: "\f39e";
 }
 
 .mdi-information-outline:before {
@@ -62,6 +62,10 @@
 
 .mdi-settings:before {
   content: "\f4f0";
+}
+
+.mdi-window-close:before {
+  content: "\f5de";
 }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
@@ -5134,6 +5138,14 @@ html {
   font-family: Roboto, Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 
+.player {
+  border-left: 1px solid #ddd;
+}
+
+.player.dead {
+  background-color: #ffcdd2;
+}
+
 #content-container {
   position: relative;
   z-index: 2;
@@ -5211,10 +5223,6 @@ a:hover {
 
 #progress {
   position: relative;
-}
-
-.players li {
-  border-left: 1px solid #ddd;
 }
 
 /*# sourceMappingURL=app.css.map */

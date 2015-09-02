@@ -6,6 +6,14 @@ html {
     overflow-x: hidden;
 }
 
+.player {
+    border-left: 1px solid #ddd;
+
+    &.dead {
+        background-color: #ffcdd2;
+    }
+}
+
 .sidebar {
     position: fixed;
     top: 0px;
@@ -131,8 +139,4 @@ a {
 }
 .line-icon-height {
     line-height: 40px;
-}
-
-.players li {
-    border-left: 1px solid #ddd;
 }

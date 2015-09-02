@@ -4,9 +4,14 @@
             <div class="toolbar__label tc-white-1">
                 Partie
             </div>
+            <div class="toolbar__right">
+                <button class="btn btn--l btn--white btn--icon" lx-ripple lx-tooltip="Réinitialiser les votes" ng-click="gamePlay.resetVotes()">
+                    <i class="mdi mdi-auto-fix"></i>
+                </button>
+            </div>
         </div>
-        <ul class="list players">
-            <li class="list-row has-divider has-divider--dark col-lg-6" ng-repeat="player in gamePlay.players track by $index">
+        <ul class="list">
+            <li class="list-row has-divider has-divider--dark col-lg-6 player" ng-class="{'dead': player.dead}" ng-repeat="player in gamePlay.players track by $index">
                 <div class="list-row__primary">
                     <i class="icon icon--s icon--grey icon--flat mdi mdi-account"></i>
                 </div>
@@ -20,7 +25,7 @@
                         </div>
                         <div class="col-md-4">
                             <lx-text-field label="Votes" fixed-label="true">
-                                <input type="number" ng-model="players.votes">
+                                <input type="number" ng-model="player.votes" min="0">
                             </lx-text-field>
                         </div>
                     </span>
@@ -32,8 +37,9 @@
                     </span>
                 </div>
 
-                <div class="list-row__secondary">
-                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-information"></i>
+                <div class="list-row__secondary" ng-click="player.dead = !player.dead">
+                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-window-close" lx-tooltip="Mort" ng-hide="player.dead"></i>
+                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-check" lx-tooltip="Rescuciter" ng-show="player.dead"></i>
                 </div>
             </li>
         </ul>

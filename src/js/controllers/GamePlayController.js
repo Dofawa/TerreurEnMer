@@ -43,7 +43,7 @@
           player.role = role.name;
         }
       });
-      if(players.length == 0)
+      if (players.length == 0)
         return;
 
       if ($scope.configuration.defaultRole == null) {
@@ -56,5 +56,32 @@
         }
       }
     };
+
+    $scope.gamePlay.resetVotes = function() {
+      $scope.gamePlay.players.forEach(function(player) {
+        player.votes = null;
+      });
+    }
+
+    $scope.$watch('configuration.players', function(value) {
+      if (typeof value != 'number' || $scope.gamePlay.launched)
+        return;
+
+      var newPlayers;
+      if ((newPlayers = value - $scope.gamePlay.players.length) > 0) {
+        if ($scope.launched)
+          return;
+        for (var i = 0; newPlayers > i; i++) {
+          $scope.gamePlay.players.push({
+            nickName: null,
+            role: null
+          });
+        }
+      } else {
+        $scope.gamePlay.players = $scope.gamePlay.players.slice(0, value);
+      }
+      Storage.set('configuration.players', value);
+    });
+
   });
 })();

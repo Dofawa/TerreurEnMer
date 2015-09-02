@@ -32,7 +32,9 @@ module.exports = function(grunt) {
                 '.tc-brown-900', '.bgc-brown-900', '.bgc-light-blue-400', '.bgc-red-500', '.bgc-light-green-600', '.bgc-yellow-800', '.tc-yellow-700', '.tc-grey-500', '.tc-brown-500', '.tc-red-500', '.tc-red-200', '.bgc-red-600', '.bgc-red-200',
 
                 // Icons used in directives
-                '.mdi-check', '.mdi-alert-circle', '.mdi-alert', '.mdi-information-outline'
+                '.mdi-check', '.mdi-alert-circle', '.mdi-alert', '.mdi-information-outline',
+
+                /\.player/
             ]
         },
         dev: {
