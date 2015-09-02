@@ -1,0 +1,41 @@
+<div class="col-md-8"  ng-controller="GamePlayController">
+    <div class="card">
+        <div class="toolbar bgc-light-blue-400">
+            <div class="toolbar__label tc-white-1">
+                Partie
+            </div>
+        </div>
+        <ul class="list players">
+            <li class="list-row has-divider has-divider--dark col-lg-6" ng-repeat="player in gamePlay.players track by $index">
+                <div class="list-row__primary">
+                    <i class="icon icon--s icon--grey icon--flat mdi mdi-account"></i>
+                </div>
+
+                <div class="list-row__content">
+                    <span class="display-block">
+                        <div class="col-md-8">
+                            <lx-text-field label="Pseudo" fixed-label="true">
+                                <input type="text" ng-model="player.nickName" ng-change="gamePlay.savePlayers()">
+                            </lx-text-field>
+                        </div>
+                        <div class="col-md-4">
+                            <lx-text-field label="Votes" fixed-label="true">
+                                <input type="number" ng-model="players.votes">
+                            </lx-text-field>
+                        </div>
+                    </span>
+                    <span class="display-block fs-body-1 tc-black-2">
+                        <span lx-tooltip="Role">
+                            <span ng-show="player.role" ng-bind="player.role"></span>
+                            <span ng-hide="player.role">Non défini</span>
+                        </span>
+                    </span>
+                </div>
+
+                <div class="list-row__secondary">
+                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-information"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -5074,6 +5074,7 @@ textarea.text-field__input {
 }
 
 .col-md-4,
+.col-lg-6,
 .col-md-8,
 .col-md-12 {
   position: relative;
@@ -5099,6 +5100,16 @@ textarea.text-field__input {
 
   .col-md-4 {
     width: 33.33333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-6 {
+    float: left;
+  }
+
+  .col-lg-6 {
+    width: 50%;
   }
 }
 
@@ -5200,6 +5211,10 @@ a:hover {
 
 #progress {
   position: relative;
+}
+
+.players li {
+  border-left: 1px solid #ddd;
 }
 
 /*# sourceMappingURL=app.css.map */
