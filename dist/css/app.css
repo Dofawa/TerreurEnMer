@@ -5268,10 +5268,6 @@ html {
   font-family: Roboto, Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
 }
 
-body {
-  background-color: #DEDABE;
-}
-
 .player {
   border-left: 1px solid #ddd;
 }
@@ -5287,7 +5283,7 @@ body {
 #content-container {
   position: relative;
   z-index: 2;
-  background: #EEE;
+  background: #DEDABE;
   transition: all 0.5s ease 0s;
   min-height: 100vh;
 }
@@ -5317,6 +5313,10 @@ a:hover {
 
 .btn--fab.z-depth3 {
   box-shadow: 0 9px 18px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  background-color: #F0EFEB !important;
 }
 
 .card.with__img__header {
