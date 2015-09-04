@@ -5316,7 +5316,7 @@ a:hover {
 }
 
 .card {
-  background-color: #F0EFEB !important;
+  background-color: #F0EFEB;
 }
 
 .card.with__img__header {
