@@ -482,8 +482,16 @@ html {
   background-color: #E53935 !important;
 }
 
+.bgc-teal-600 {
+  background-color: #00897B !important;
+}
+
 .bgc-light-green-600 {
   background-color: #7CB342 !important;
+}
+
+.bgc-teal-700 {
+  background-color: #00796B !important;
 }
 
 .bgc-yellow-800 {
@@ -5258,6 +5266,10 @@ textarea.text-field__input {
 
 html {
   font-family: Roboto, Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+
+body {
+  background-color: #DEDABE;
 }
 
 .player {

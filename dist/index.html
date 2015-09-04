@@ -1,1 +1,28 @@
-<!DOCTYPE html><html lang=fr ng-app=app><head><meta charset="UTF-8"><title>Terreur en mer</title><link rel=stylesheet href=css/app.min.css><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport"></head><body><div id=content-container><ng-include src="'partials/common/header.html'"></ng-include><div class="container mv+"><ng-include ng-controller=HomeController src="'partials/homepage/homepage.html'"></ng-include></div></div><script src=js/app.min.js></script></body></html>
+<!DOCTYPE html>
+<html lang="fr" ng-app="app">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Terreur en mer</title>
+
+        <!-- injector:css -->
+        <link rel="stylesheet" href="css/app.css">
+        <!-- endinjector -->
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+        <!-- <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <link href="img/favicon.ico" rel="icon" type="image/x-icon"> -->
+    </head>
+    <body>
+        <!-- Content -->
+        <div id="content-container">
+            <ng-include src="'partials/common/header.html'"></ng-include>
+
+            <div class="container mv+">
+                <ng-include ng-controller="HomeController" src="'partials/homepage/homepage.html'"></ng-include>
+            </div>
+        </div>
+
+        <!-- injector:js -->
+        <script src="js/app.js"></script>
+        <!-- endinjector -->
+    </body>
+</html>
