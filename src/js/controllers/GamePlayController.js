@@ -14,10 +14,12 @@
     }
 
     $scope.gamePlay.players = Storage.get('gamePlay.players', []);
+    $scope.gamePlay.launched = false;
     $scope.gamePlay.savePlayers = function() {
       Storage.set('gamePlay.players', $scope.gamePlay.players);
     };
     $scope.gamePlay.launch = function() {
+      $scope.gamePlay.launched = true;
       jQuery('#gamePlay-timer')[0].start();
 
       // Set players' role to null

@@ -60,6 +60,14 @@
   content: "\f3c2";
 }
 
+.mdi-pause:before {
+  content: "\f46b";
+}
+
+.mdi-play:before {
+  content: "\f48c";
+}
+
 .mdi-plus:before {
   content: "\f493";
 }
