@@ -1,4 +1,4 @@
-<div class="col-md-8"  ng-controller="GamePlayController">
+<div class="col-md-8" ng-controller="GamePlayController">
     <div class="card">
         <div class="toolbar bgc-teal-600">
             <div class="toolbar__label tc-white-1">
@@ -16,7 +16,7 @@
                 <span ng-show="hours">{{hours}} heures, </span>
                 <span ng-show="minutes">{{minutes}} minutes, </span>
                 {{seconds}} secondes, {{millis}} millisecondes.
-                
+
                 <br/>
 
                 <span ng-show="isRunning">
@@ -52,7 +52,8 @@
                             <span ng-hide="player.role">Non défini</span>
                         </span>
                         <span ng-show="player.marriedTo">
-                            / Lié à <span ng-bind="player.marriedTo.nickName"></span>
+                            / Lié à
+                            <span ng-bind="player.marriedTo.nickName"></span>
                         </span>
                     </span>
                 </div>
@@ -67,16 +68,16 @@
             </li>
         </ul>
     </div>
-    <div class="card p+ mt+ text-center">
-        Expiration du role dans :
-        <timer autostart="false" id="gamePlay-role-timer" countdown="60" interval="1000">
-            {{countdown}} secondes
-        </timer>
+    <timer autostart="false" id="gamePlay-role-timer" countdown="60" interval="1000">
+        <div class="card p+ mt+ text-center" ng-class="{'bgc-red-200': countdown == 0}">
+            Expiration du role dans : {{countdown}} secondes
 
-        <br/><br/>
+            <br/>
+            <br/>
 
-        <button class="btn btn--l bgc-teal-600 tc-white btn--raised" lx-ripple ng-click="gamePlay.startRoleTimer()">
-            Lancer le compteur
-        </button>
-    </div>
+            <button class="btn btn--l bgc-teal-600 tc-white btn--raised" lx-ripple ng-click="reset(); start()">
+                Lancer le compteur
+            </button>
+        </div>
+    </timer>
 </div>

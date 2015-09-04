@@ -92,10 +92,5 @@
       LxDialogService.open('marry');
     }
 
-    $scope.gamePlay.startRoleTimer = function() {
-      jQuery('#gamePlay-role-timer')[0].reset();
-      jQuery('#gamePlay-role-timer')[0].start();
-    }
-
   });
 })();
