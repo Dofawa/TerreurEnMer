@@ -6,6 +6,7 @@ var app;
     app = angular.module('app', [
             // 'ngRoute',
             'lumx',
+            'timer',
             // 'restangular',
             // 'angular-jwt',
             // 'infinite-scroll'

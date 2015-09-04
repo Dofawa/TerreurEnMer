@@ -18,6 +18,8 @@
       Storage.set('gamePlay.players', $scope.gamePlay.players);
     };
     $scope.gamePlay.launch = function() {
+      jQuery('#gamePlay-timer')[0].start();
+
       // Set players' role to null
       $scope.gamePlay.players = $scope.gamePlay.players.map(function(value) {
         value.role = null;
@@ -86,6 +88,11 @@
     $scope.gamePlay.marry = function(player) {
       $scope.marry.player = player;
       LxDialogService.open('marry');
+    }
+
+    $scope.gamePlay.startRoleTimer = function() {
+      jQuery('#gamePlay-role-timer')[0].reset();
+      jQuery('#gamePlay-role-timer')[0].start();
     }
 
   });

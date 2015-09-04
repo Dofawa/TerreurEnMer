@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "lumx": "~0.3.79"
+    "lumx": "~0.3.79",
+    "angular-timer": "~1.3.3"
   }
 }

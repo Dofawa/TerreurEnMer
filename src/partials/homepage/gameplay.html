@@ -10,6 +10,14 @@
                 </button>
             </div>
         </div>
+        <div class="p+ has-divider has-divider--dark">
+            Partie lancée il y a :
+            <timer autostart="false" id="gamePlay-timer">
+                <span ng-show="hours">{{hours}} heures, </span>
+                <span ng-show="minutes">{{minutes}} minutes, </span>
+                {{seconds}} secondes, {{millis}} millisecondes.
+            </timer>
+        </div>
         <ul class="list">
             <li class="list-row has-divider has-divider--dark col-lg-6 player" ng-class="{'dead': player.dead, 'married': player.marriedTo}" ng-repeat="player in gamePlay.players track by $index">
                 <div class="list-row__primary">
@@ -49,5 +57,17 @@
                 </div>
             </li>
         </ul>
+    </div>
+    <div class="card p+ mt+ text-center">
+        Expiration du role dans : 
+        <timer autostart="false" id="gamePlay-role-timer" countdown="60" interval="1000">
+            {{countdown}} secondes
+        </timer>
+
+        <br/><br/>
+
+        <button class="btn btn--l bgc-teal-600 tc-white btn--raised" lx-ripple ng-click="gamePlay.startRoleTimer()">
+            Lancer le compteur
+        </button>
     </div>
 </div>
