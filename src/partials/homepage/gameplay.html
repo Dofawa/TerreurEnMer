@@ -59,11 +59,13 @@
                 </div>
 
                 <div class="list-row__secondary">
-                    <span ng-click="player.dead = !player.dead">
+                    <a href="" ng-click="player.dead = !player.dead">
                         <i class="icon icon--xs icon--grey icon--flat mdi mdi-window-close" lx-tooltip="Mort" ng-hide="player.dead"></i>
                         <i class="icon icon--xs icon--grey icon--flat mdi mdi-check" lx-tooltip="Rescuciter" ng-show="player.dead"></i>
-                    </span>
-                    <i class="icon icon--xs icon--grey icon--flat mdi mdi-account-switch" lx-tooltip="Lier à un personnage" ng-click="gamePlay.marry(player)"></i>
+                    </a>
+                    <a href="" ng-click="gamePlay.marry(player)">
+                        <i class="icon icon--xs icon--grey icon--flat mdi mdi-account-switch" lx-tooltip="Lier à un personnage"></i>
+                    </a>
                 </div>
             </li>
         </ul>
