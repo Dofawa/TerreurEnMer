@@ -71,7 +71,7 @@
         </ul>
     </div>
     <timer autostart="false" id="gamePlay-role-timer" countdown="60" interval="1000">
-        <div class="card p+ mt+ text-center" ng-class="{'bgc-red-200': countdown == 0}">
+        <div class="card p+ mt+ text-center" ng-class="{'bgc-red-200': countdown == 0}" ng-controller="RoleTimerController">
             Expiration du role dans : {{countdown}} secondes
 
             <br/>
